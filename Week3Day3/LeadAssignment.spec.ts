@@ -2,6 +2,7 @@ import test from "@playwright/test"
 
 test("Create Lead Salesforce", async({page})=>{
 
+    //Log into Salesforce Application and create a Lead
     await page.goto("https://login.salesforce.com")
     await page.locator("#username").fill("dilipkumar.rajendran@testleaf.com")
     await page.locator("#password").fill("TestLeaf@2025")
