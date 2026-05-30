@@ -2,6 +2,7 @@ import test from "@playwright/test"
 
 test("Edit Lead", async({page})=>{
 
+    //Log into Leaftaps Application -> Create a Lead and Edit it
     await page.goto("https://leaftaps.com/opentaps/control/main")
     await page.locator("#username").fill("democsr")
     await page.locator("[name='PASSWORD']").fill("crmsfa")
