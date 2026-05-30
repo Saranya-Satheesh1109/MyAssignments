@@ -2,6 +2,7 @@ import test from "@playwright/test"
 
 test("Edit Individuals", async({page})=>{
 
+    //Login into Salesforce Application and Edit an Individual
     await page.goto("https://login.salesforce.com")
     await page.locator("#username").fill("dilipkumar.rajendran@testleaf.com")
     await page.locator("#password").fill("TestLeaf@2025")
