@@ -22,7 +22,4 @@ test("Create Lead Salesforce", async({page})=>{
     await page.locator("[name='Company']").fill("Learning Academy")
     await page.locator("[name='SaveEdit']").click()
    
-
-
-
 })
