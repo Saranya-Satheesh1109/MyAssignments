@@ -14,11 +14,4 @@ test("Frame Leafground", async({page})=>{
     const clickTest2 = await frameVal[4].locator("#Click").innerText()
     expect.soft(clickTest2).toBe("Hurray! You Clicked Me.")
 
-    
-
-
-
-
-
-
 })
