@@ -35,11 +35,4 @@ test("Decathlon Assignment", async({page})=>{
     const amount = await page.locator("(//div[@class='flex gap-1'])[3]").innerText()
     console.log("The total amount is : " + amount)//Printing the total amount
 
-    
-
-
-
-
-
-
 })
