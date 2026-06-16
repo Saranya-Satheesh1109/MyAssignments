@@ -1,5 +1,6 @@
 import test from "@playwright/test"
 
+//Login into Salesforce application and storing the values using Storage state in a json file
 test("Store SalesforceLogin credentials in Storage state", async({page})=>{
 
     await page.goto("https://login.salesforce.com/")
