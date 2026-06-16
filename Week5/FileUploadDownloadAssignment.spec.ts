@@ -1,5 +1,6 @@
 import test from "@playwright/test"
 
+//Upload a file -> Upload an image in the specified area
 test("File Upload", async({page})=>{
 
     await page.goto("https://the-internet.herokuapp.com/upload")
@@ -7,17 +8,14 @@ test("File Upload", async({page})=>{
     await page.waitForTimeout(2000)
     await page.locator("(//input[@type='file'])[2]").setInputFiles('./TestData/Human_Map.jpg')
     await page.waitForTimeout(2000)
-
 })
 
 test("File Donwload", async({page})=>{
 
+    //Download a file from the page with returning the file name form the browser
     await page.goto("https://the-internet.herokuapp.com/download")
     const download = page.waitForEvent('download')
     await page.locator("//div/a[text()='TextDoc.txt']").click()
     const fileDownload = await download
     await fileDownload.saveAs("TestData/" + fileDownload.suggestedFilename())
-
-
-
 })
