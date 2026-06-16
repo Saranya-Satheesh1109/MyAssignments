@@ -1,5 +1,6 @@
 import test from "@playwright/test"
 
+//Login into Leaftaps application and storing the values using Storage state in a json file
 test("Leaftaps Login Storage State", async({page})=>{
 
     await page.goto("https://leaftaps.com/opentaps/control/main")
