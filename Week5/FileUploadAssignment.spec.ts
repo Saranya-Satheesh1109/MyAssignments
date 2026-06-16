@@ -1,5 +1,6 @@
 import test,{expect} from "@playwright/test"
 
+//Upload the file with type='file' attribute
 test("File Upload Assignment", async({page})=>{
 
     await page.goto("https://login.salesforce.com/")
@@ -13,6 +14,7 @@ test("File Upload Assignment", async({page})=>{
     await page.waitForTimeout(2000)
     await page.locator("//span/p[text()='Accounts']").click()
     //await page.waitForTimeout(2000)
+    //Creating a new Account
     await page.getByTitle("New").first().click()
     //await page.waitForTimeout(2000)
     await page.locator("[name='Name']").fill("Saranya Satheesh")
@@ -27,9 +29,5 @@ test("File Upload Assignment", async({page})=>{
     console.log(text)
     expect.soft(text).toBe('Account "Saranya Satheesh" was created.')
     await page.locator("//input[@type='file']").setInputFiles('./TestData/Selenium_Locators_Guide.pdf')
-
-
-
-
 
 })
